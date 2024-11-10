@@ -250,7 +250,7 @@ if(screen_d['screen']['height']<screen_d['screen']['width']):
 			        label = res[0].probs.top5
 			        conf = res[0].probs.top5conf
 			        conf = conf.tolist()
-			        if conf[0] < 0.95:
+			        if conf[0] < 0.80:
 				        st.write('No Disease Detected')
 			        else:
 				        st.write('Disease: ' + str(res[0].names[label[0]].title()))
@@ -462,7 +462,7 @@ if(screen_d['screen']['height']<screen_d['screen']['width']):
 			        label = res[0].probs.top5
 			        conf = res[0].probs.top5conf
 			        conf = conf.tolist()
-			        if conf[0]<0.95:
+			        if conf[0]<0.80:
 				        st.write('कोई बीमारी नहीं पाई गई')
 			        else:
 				        st.write('बीमारी: ' + str(res[0].names[label[0]].title()))
@@ -676,7 +676,7 @@ if(screen_d['screen']['height']<screen_d['screen']['width']):
 			        label = res[0].probs.top5
 			        conf = res[0].probs.top5conf
 			        conf = conf.tolist()
-			        if conf[0]<0.95:
+			        if conf[0]<0.80:
 				        st.write('ਕੋਈ ਬਿਮਾਰੀ ਨਹੀਂ ਲੱਭੀ')
 			        else:
 				        st.write('ਰੋਗ: ' + str(res[0].names[label[0]].title()))
@@ -1432,7 +1432,7 @@ else:
 			        label = res[0].probs.top5
 			        conf = res[0].probs.top5conf
 			        conf = conf.tolist()
-			        if conf[0]<0.95:
+			        if conf[0]<0.80:
 				        st.write('कोई बीमारी नहीं पाई गई')
 			        else:
 				        st.write('बीमारी: ' + str(res[0].names[label[0]].title()))
@@ -1645,7 +1645,7 @@ else:
 			        label = res[0].probs.top5
 			        conf = res[0].probs.top5conf
 			        conf = conf.tolist()
-			        if conf[0]<0.95:
+			        if conf[0]<0.80:
 				        st.write('ਕੋਈ ਬਿਮਾਰੀ ਨਹੀਂ ਲੱਭੀ')
 			        else:
 				        st.write('ਰੋਗ: ' + str(res[0].names[label[0]].title()))
