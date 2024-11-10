@@ -1220,7 +1220,7 @@ else:
 			        label = res[0].probs.top5
 			        conf = res[0].probs.top5conf
 			        conf = conf.tolist()
-			        if conf[0] < 0.80:
+			        if conf[0] < 0.10:
 				        st.write('No Disease Detected')
 			        else:
 				        st.write('Disease: ' + str(res[0].names[label[0]].title()))
