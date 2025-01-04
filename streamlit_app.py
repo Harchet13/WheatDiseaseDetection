@@ -28,7 +28,7 @@ if(screen_d['screen']['height']<screen_d['screen']['width']):
 		def set_language():
 		    if f"selected_language" in st.session_state:
 		        lang = st.session_state[f"selected_language"]
-		        # st.experimental_set_query_params(**{f"lang": lang})
+		        # st.query_params(**{f"lang": lang})
 		        return lang
 		    return "English"
 	
@@ -872,7 +872,7 @@ else:
 		def set_language():
 		    if f"selected_language" in st.session_state:
 		        lang = st.session_state[f"selected_language"]
-		        # st.experimental_set_query_params(**{f"lang": lang})
+		        # st.query_params(**{f"lang": lang})
 		        return lang
 		    return "English"
 	
