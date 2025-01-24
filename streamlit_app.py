@@ -25,15 +25,10 @@ if(screen_d['screen']['height']<screen_d['screen']['width']):
 	    	</style>
 	    	''',unsafe_allow_html=True)
 		def set_language():
-		    # Check if 'selected_language' is already in session state
-		    if "selected_language" in st.session_state:
-		        lang = st.session_state["selected_language"]
-		        # Update query parameters silently
-		        st.experimental_set_query_params(lang=lang)
+		    if f"selected_language" in st.session_state:
+		        lang = st.session_state[f"selected_language"]
+		        # st.query_params(**{f"lang": lang})
 		        return lang
-		    
-		    # Default fallback language
-		    st.experimental_set_query_params(lang="English")
 		    return "English"
 		
 			
@@ -875,15 +870,10 @@ else:
 		</style>''', unsafe_allow_html=True)
 		
 		def set_language():
-    # Check if 'selected_language' is already in session state
-		    if "selected_language" in st.session_state:
-		        lang = st.session_state["selected_language"]
-		        # Update query parameters silently
-		        st.experimental_set_query_params(lang=lang)
+		    if f"selected_language" in st.session_state:
+		        lang = st.session_state[f"selected_language"]
+		        # st.query_params(**{f"lang": lang})
 		        return lang
-		    
-		    # Default fallback language
-		    st.experimental_set_query_params(lang="English")
 		    return "English"
 
 	
