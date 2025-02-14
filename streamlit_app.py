@@ -10,7 +10,7 @@ st.set_page_config(page_title="WheatCheck",page_icon="WheatCheck clear logo.png"
 screenD = ScreenData(setTimeout=3000)
 screen_d = screenD.st_screen_data()
 
-if(screen_d['screen']['height']<screen_d['screen']['width']):
+if (screen_d['screen']['height']<screen_d['screen']['width']) or (screen_d is None):
 	with streamlit_analytics.track():
 		st.markdown('''
 	    	<style>
